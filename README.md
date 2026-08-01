@@ -1,9 +1,12 @@
 # armory
+
 <div align=center>
 <img height=100 src="./favicon.png">
 
 A minimalist workspace for managing multiple [Excalidraw](https://excalidraw.com) diagrams.
 </div>
+
+Try it out on [yagodorea.github.io/armory](https://yagodorea.github.io/armory). Deployed with GH pages.
 
 ## Features
 
@@ -22,6 +25,7 @@ A minimalist workspace for managing multiple [Excalidraw](https://excalidraw.com
 npm install
 npm run dev        # http://localhost:5173
 npm run build      # production build in dist/
+npm run preview    # serve that build locally
 ```
 
 ## Pack format
