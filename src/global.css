@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+}
+
+.app {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --border: #e4e4e8;
+  --text: #1b1b1f;
+  --muted: #8a8a92;
+  --hover: #ececf0;
+  --hover-strong: #dcdce2;
+  --active: #e3e2fe;
+  --accent: #6965db;
+  --accent-hover: #5a56c9;
+  --accent-text: #ffffff;
+  --danger: #d64545;
+  --danger-hover: #c03a3a;
+  --overlay: rgba(20, 20, 25, 0.4);
+
+  display: flex;
+  height: 100vh;
+  color: var(--text);
+}
+
+.app[data-theme="dark"] {
+  --bg: #232329;
+  --surface: #2c2c34;
+  --border: #3d3d47;
+  --text: #ced4da;
+  --muted: #86868f;
+  --hover: #31313b;
+  --hover-strong: #3f3f4b;
+  --active: #403e6a;
+  --accent: #a8a5ff;
+  --accent-hover: #bbb8ff;
+  --accent-text: #1b1b1f;
+  --danger: #d64545;
+  --danger-hover: #e05555;
+  --overlay: rgba(0, 0, 0, 0.55);
+}
+
+/* ---- buttons ---- */
+
+.btn {
+  font: inherit;
+  color: var(--text);
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--hover);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+.btn.danger:hover:not(:disabled) {
+  background: var(--danger-hover);
+}
+
+.icon-btn {
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: var(--hover-strong);
+  color: var(--text);
+}
+
+.link-btn {
+  border: none;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}

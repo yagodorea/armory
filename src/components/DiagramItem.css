@@ -1,0 +1,69 @@
+.diagram-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.diagram-item.dragging {
+  opacity: 0.4;
+}
+
+.diagram-item.drop-before::before,
+.diagram-item.drop-after::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--accent);
+  pointer-events: none;
+}
+
+.diagram-item.drop-before::before {
+  top: -1px;
+}
+
+.diagram-item.drop-after::after {
+  bottom: -1px;
+}
+
+.diagram-item:hover {
+  background: var(--hover);
+}
+
+.diagram-item.active {
+  background: var(--active);
+}
+
+.diagram-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-btn {
+  visibility: hidden;
+}
+
+.diagram-item:hover .delete-btn {
+  visibility: visible;
+}
+
+.rename-input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  padding: 3px 5px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  outline: none;
+}

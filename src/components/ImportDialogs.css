@@ -1,0 +1,9 @@
+.conflict-text {
+  margin: 0;
+}
+
+.conflict-progress {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}

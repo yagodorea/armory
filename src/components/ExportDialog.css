@@ -1,0 +1,25 @@
+.export-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.export-list {
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.export-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.export-item:hover {
+  background: var(--hover);
+}
